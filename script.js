@@ -29,15 +29,21 @@ let resultadoPromedio = promedioAutoeval(notaAutoeval1, notaAutoeval2, notaAutoe
 if (resultadoPromedio >= 7){
     console.log("La nota promedio de las autoevaluaciones es " + resultadoPromedio)
     alert("Puede rendir el examen final")
-    let notaExamenFinal = parseFloat(prompt("Ingrese la nota del Examen Final"))
-    if((notaExamenFinal >= 7) && notaExamenFinal <= 10){
-        console.log(notaExamenFinal)
-        alert("Felicidades! Ingresaste a la carrera.")
-    }else if (isNaN(notaExamenFinal) || notaExamenFinal < 0 || notaExamenFinal > 10){
-        console.log(notaExamenFinal)
-        alert("Coloca una nota válida del 0 al 10")
-    }else{
-        alert("Seguí participando! Te esperamos el próximo año.")
+    let continua2 = true
+    while(continua2){
+        let notaExamenFinal = parseFloat(prompt("Ingrese la nota del Examen Final"))
+        if(notaExamenFinal >= 7 && notaExamenFinal <= 10){
+            console.log(notaExamenFinal)
+            alert("Felicidades! Ingresaste a la carrera.")
+            continua2 = false
+        }else if(notaExamenFinal < 7 && notaExamenFinal >= 0){
+            console.log(notaExamenFinal)
+            alert("Usted es Homero Thompson!! Siga participando el próximo año.")
+            continua2 = false
+        }else{
+            console.log(notaExamenFinal)
+            alert("Coloca una nota válida del 0 al 10")
+        }
     }
 }else{
     console.log("La nota promedio de las autoevaluaciones es " + resultadoPromedio)
