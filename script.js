@@ -30,7 +30,7 @@ if (resultadoPromedio >= 7){
     console.log("La nota promedio de las autoevaluaciones es " + resultadoPromedio)
     alert("Puede rendir el examen final")
     let notaExamenFinal = parseFloat(prompt("Ingrese la nota del Examen Final"))
-    if((notaExamenFinal >= 7) && notaExamenFinal < 10){
+    if((notaExamenFinal >= 7) && notaExamenFinal <= 10){
         console.log(notaExamenFinal)
         alert("Felicidades! Ingresaste a la carrera.")
     }else if (isNaN(notaExamenFinal) || notaExamenFinal < 0 || notaExamenFinal > 10){
